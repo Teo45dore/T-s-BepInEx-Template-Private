@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = $safeprojectname$
+build_property.ProjectDir = C:\Users\sandr\OneDrive\Documents\dev\Git Repos\C#\Misc\T's BepInEx Template\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

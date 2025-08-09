@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<RootNamespace>$safeprojectname$</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<PackageId>Teo45dore.BepInExTemplate</PackageId>
+		<Title>T's BepInEx Template</Title>
+		<IncludeSymbols>True</IncludeSymbols>
+		<Authors>Teo45dore</Authors>
+		<Description>Yet another plugin template for BepInEx 5.</Description>
+		<PackageTags>C#, BepInEx 5, Plugin</PackageTags>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+    <PackageType>Template</PackageType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**" />
+		<Compile Remove="**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+		<PackageReference Include="BepInEx.Core" Version="5.*" />
+		<PackageReference Include="UnityEngine.Modules" Version="5.6.0" IncludeAssets="compile" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+	</ItemGroup>
+</Project>

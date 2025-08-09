@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <PluginDirectory>{pluginDir}</PluginDirectory>
+    <_LastSelectedProfileId>C:\Users\sandr\OneDrive\Documents\Visual Studio 2022\Templates\ProjectTemplates\C#\T%27sBepInExTemplate\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <Target Name="CopyFiles" AfterTargets="PostBuildEvent" Condition="'$(PluginDirectory)' != ''">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginDirectory)" />
+  </Target>
+</Project>

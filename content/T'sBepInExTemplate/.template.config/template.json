@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Teo45dore",
+  "classifications": [ "BepInEx 5", "Plugin" ],
+  "identity": "Teo45dore.BepInEx5.Template",
+  "name": "T's BepInEx Template",
+  "shortName": "TsBepInEx",
+  "description": "Yet another template for creating BepInEx 5 plugins.",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "sourceName": "TemplateName",
+  "placeholderFilename": "_._",
+  "symbols": {
+    "Target Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project",
+      "datatype": "text",
+      "defaultValue": "net472",
+      "replaces": "net472",
+      "isRequired": true
+    },
+    "Unity Version": {
+      "type": "parameter",
+      "description": "Unity version to reference whilst developing the plugin",
+      "datatype": "text",
+      "replaces": "5.6.0",
+      "defaultValue": "5.6.0",
+      "isRequired": true
+    },
+    "Plugin GUID": {
+      "type": "parameter",
+      "description": "A unique identifier for the plugin, e.g., com.YourName.YourModName",
+      "datatype": "text",
+      "replaces": "{pluginGUID}",
+      "defaultValue": "",
+      "isRequired": true
+    },
+    "BepInEx Plugin Directory (Optional)": {
+      "type": "parameter",
+      "description": "If filled out, automatically copy over the project's dll to the specified directory for quicker testing.",
+      "datatype": "text",
+      "replaces": "{pluginDir}",
+      "defaultValue": "",
+      "isRequired": false
+    }
+  },
+
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "include": [
+            "**/TemplateName.csproj.user"
+          ]
+        }
+      ]
+    }
+  ]
+}
